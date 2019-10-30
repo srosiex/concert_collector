@@ -5,10 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title> 
-     <link rel="stylesheet" type="text/css" href="css/style.css"
+     <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
 <h1>Welcome</h1>
+<% if logged_in? %>
+   <p> <a href="/events">Events</a></p>
+<% end %>
+<form action="/logout" method="post" class="logout">
+    <input type="hidden" name="_method" value="delete">
+    <input type="submit" value="Logout">
+    </form>
     <%= yield %>
 </body>
 </html>

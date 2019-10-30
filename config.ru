@@ -1,6 +1,7 @@
 require_relative './config/env'
 
 
-user Rack::MethodOverride
-user SessionsController
+use Rack::MethodOverride
+use SessionController
+use EventsController
 run ApplicationController

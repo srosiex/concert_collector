@@ -1,0 +1,13 @@
+<div class="event">
+    <h4><%= user.first_name %></h4>
+    <p><%= event.artist %></p>
+    <p><%= event.venue %></p>
+    <p><%= event.location %></p>
+    <% if event.user == current_user %>
+        <a href="/events/<%= event.id %>/edit">Edit</a>
+        <form action="/events/<%= event.id %>" method="post">
+        <input type="hidden" name="_method" value="delete">
+        <input type="submit" value="delete">
+        </form>
+        <% end %>
+</div>
