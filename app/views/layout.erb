@@ -8,14 +8,27 @@
      <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
-<h1>Welcome</h1>
-<% if logged_in? %>
-   <p> <a href="/events">Events</a></p>
-<% end %>
+<header>
+    <div class="container">
+    <h1 class="logo">Concert Collector</h1>
+    <nav>
+        <ul>
+            <li><% if logged_in? %>
+          <a href="/events">Home</a> <% end %>
+
+            
+            <li><a href="events/my_events">User Events</a></li>
+        </ul>
+        <% end %>
+    </nav>
+
 <form action="/logout" method="post" class="logout">
     <input type="hidden" name="_method" value="delete">
     <input type="submit" value="Logout">
     </form>
+    </div>
+
     <%= yield %>
+
 </body>
 </html>

@@ -7,6 +7,8 @@ configure do
     set :session_secret, 'password_secure'
 end
 
+    run
+
     get '/' do
         erb :index
     end

@@ -1,18 +1,28 @@
 html{ 
-    background-color: pink;
+    background-color: #c8dad3;
 }
 
 .event{
-    background-color: white;
+    background-color: #f2f6f5;
     border: 2px solid gray;
     border-radius: 5px;
     padding: 5px;
-    margin: 5px;
+    margin-right: 700px;
 }
 .my_events{
-    background-color: white;
+    background-color: #f2f6f5;
     border: 2px solid gray;
     border-radius: 5px;
     padding: 5px;
-    margin: 5px;
+    margin-right: 700px;
+}
+h1{
+    color: #93b5b3;
+}
+.welcome  {
+
+    background-color: #f2f6f5;
+    border: 2px solid gray;
+    padding: 5px;
+    margin-right: 500px;
 }

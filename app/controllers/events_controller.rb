@@ -13,7 +13,12 @@ end
     post '/events' do
         authenticate
             u = current_user
-            u.events.build(artist: params[:artist], venue: params[:venue], location: params[:location])
+            @new_event = u.events.build(artist: params[:artist], venue: params[:venue], location: params[:location])
+            @slug = "#{@new_event.artist}".gsub(' ','+')
+            url = "https://www.last.fm/music/" + @slug
+            Scraper.image_url(url)
+            # @artist = Event.all.find_by(artist: params[:artist])
+            # url = "https://www.last.fm/music/" + @artist.gsub(' ','+')
             if u.save
                 redirect to '/events'
             else

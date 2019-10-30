@@ -1,5 +1,6 @@
-<div class="my_events">
+<div id="my_events">
 <% current_user.events.each do |e| %>
+
 <p>Artist: <%= e.artist %>
 <br>Venue: <%= e.venue %>
 <br>Location: <%= e.location %></p>
