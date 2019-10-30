@@ -13,10 +13,12 @@ end
     post '/events' do
         authenticate
             u = current_user
-            @new_event = u.events.build(artist: params[:artist], venue: params[:venue], location: params[:location])
-            @slug = "#{@new_event.artist}".gsub(' ','+')
-            url = "https://www.last.fm/music/" + @slug
-            Scraper.image_url(url)
+            @event = u.events.build(artist: params[:artist], date: params[:date], venue: params[:venue], location: params[:location])
+            @slug = "#{@event.artist}".gsub(' ','+')
+            url = "https://www.last.fm/music/#{@slug}"
+            Scraper.scrape_image(url)
+            @url = Scraper.image_url
+            @event.url = @url
             # @artist = Event.all.find_by(artist: params[:artist])
             # url = "https://www.last.fm/music/" + @artist.gsub(' ','+')
             if u.save
@@ -52,7 +54,7 @@ end
     patch '/events/:id' do 
         @event = Event.find_by(id: params[:id])
         authenticate_user(@event)
-            @event.update(artist: params[:artist], venue: params[:venue], location: params[:location])
+            @event.update(artist: params[:artist], date: params[:date], venue: params[:venue], location: params[:location])
             redirect '/events'
         end
     end

@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<link href="https://fonts.googleapis.com/css?family=Lexend+Mega&display=swap" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="css/style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title> 
-     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>Concert Collector</title> 
 </head>
 <body>
 <header>
@@ -13,22 +14,21 @@
     <h1 class="logo">Concert Collector</h1>
     <nav>
         <ul>
-            <li><% if logged_in? %>
-          <a href="/events">Home</a> <% end %>
-
-            
-            <li><a href="events/my_events">User Events</a></li>
-        </ul>
-        <% end %>
+        <% if logged_in? %>
+                 <% end %>
+                 <a href="/events">Home</a></li>
+                 <li><a href="events/my_events">My Concerts</a></li>
+                 <li><a href="events/new">Add New Concert</a></li>
+                 <li><form action="/logout" method="post" class="logout">
+                 <input type="hidden" name="_method" value="delete">
+                 <input type="submit" value="Logout">
+                 </form> </ul>
     </nav>
-
-<form action="/logout" method="post" class="logout">
-    <input type="hidden" name="_method" value="delete">
-    <input type="submit" value="Logout">
-    </form>
     </div>
+    </header>
 
-    <%= yield %>
-
-</body>
+        <div class="page_content">
+             <%= yield %>
+        </div>
+    </body>
 </html>

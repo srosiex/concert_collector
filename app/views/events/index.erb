@@ -1,5 +1,3 @@
-<a href='events/my_events'>My Events</a>
-<a href='events/new'>New Event</a>
 
 <% @events.each do |event| %>
 <%=  erb :'events/_event', locals: {user: event.user, event: event}  %>
