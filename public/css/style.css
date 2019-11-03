@@ -14,8 +14,6 @@ html{
     margin-left: 150px;
     margin-top: 5px;
 
-    display: grid;
-    grid:
 }
 .my_events{
     background-color: #f2f6f5;
@@ -39,6 +37,14 @@ html{
     margin-right: 100px;
     margin-top: 10px;
     
+}
+.welcome2  {
+    color: #63707e;
+    padding: 5px;
+    float: center;
+    margin-right: 150px;
+    margin-left: 150px;
+    margin-top: 5px;
 }
 
 .container{
@@ -86,7 +92,7 @@ nav a {
     font-size: 14px;
 }
 nav a:hover {
-    color: #f2f6f5
+    color: #f2f6f5;
 }
 nav a::before {
     content: '';
@@ -102,5 +108,5 @@ nav a::before {
 }
 
 nav a:hover::before{
-    width: 100%
+    width: 100%;
 }

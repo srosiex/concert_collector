@@ -1,14 +1,16 @@
 
-    <div class="my_events">
+
         <% current_user.events.each do |e| %>
-                <img src="<%= url %>">
-                <p>Artist: <%= e.artist %>
+            <div class="my_events">
+            <img src="<%= @eurl %>">
+            <p><b><%= e.date %></b>
+                <br>Artist: <%= e.artist %>
                 <br>Venue: <%= e.venue %>
                 <br>Location: <%= e.location %></p>
                  <a href="/events/<%= e.id %>/edit">Edit</a>
                  <form action="/events/<%= e.id %>" method="post">
                   <input type="hidden" name="_method" value="delete">
                   <input type="submit" value="delete">
-                   </form>
+                   </form></div>
         <% end %>
         
