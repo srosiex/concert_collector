@@ -1,3 +1,4 @@
+<div class="login">
 <form action="/login" method="post">
 <br><label for="username">Username:</label>    
 <input type="text" id="username" name="username">
@@ -7,6 +8,6 @@
 <% if @failed %>
 <p class="danger">Username/Password Combo is incorrect </p>
 <% end %>
-</form>
+<p><a href="/">Back</a></p>
+</form></div>
 
-<p><a href="/">Back</a>
