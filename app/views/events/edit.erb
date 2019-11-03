@@ -1,5 +1,5 @@
 
-
+<div class="edit_event">
 <form action="/events/<%= @event.id %>" method="post">
 <input type="hidden" name="_method" value="patch">
 <br><label for="artist">Artist:</label>    
@@ -12,3 +12,4 @@
 <input type="text" id="location" name="location" value="<%= @event.location %>">
 <br><input type="submit" value="Submit">
 </form>
+</div>

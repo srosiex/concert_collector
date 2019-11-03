@@ -130,3 +130,23 @@ nav a:hover::before{
     margin-left: 150px;
     margin-top: 5px;
 }
+.new_event {
+    background-color: #f2f6f5;
+    border: 2px solid gray;
+    border-radius: 5px;
+    padding: 5px;
+    float: center;
+    margin-right: 150px;
+    margin-left: 150px;
+    margin-top: 5px;
+}
+.edit_event {
+    background-color: #f2f6f5;
+    border: 2px solid gray;
+    border-radius: 5px;
+    padding: 5px;
+    float: center;
+    margin-right: 150px;
+    margin-left: 150px;
+    margin-top: 5px;
+}
