@@ -2,11 +2,12 @@
 
         <% current_user.events.each do |e| %>
             <div class="my_events">
-            <img src="<%= @eurl %>">
-            <p><b><%= e.date %></b>
-                <br>Artist: <%= e.artist %>
-                <br>Venue: <%= e.venue %>
-                <br>Location: <%= e.location %></p>
+
+            <p><%= e.date %>
+                <p><img class="band_img" src="<%= e.url %>"></p>
+                <br><h3>Artist:</h3> <%= e.artist %>
+                <br><h3>Venue:</h3> <%= e.venue %>
+                <br><h3>Location:</h3> <%= e.location %></p>
                  <a href="/events/<%= e.id %>/edit">Edit</a>
                  <form action="/events/<%= e.id %>" method="post">
                   <input type="hidden" name="_method" value="delete">

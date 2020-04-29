@@ -30,7 +30,7 @@ end
         end
     end
  
-    def authenticate_user(post)
+    def authenticate_user(event)
         authenticate
         redirect '/index' if @event && current_user != @event.user
     end

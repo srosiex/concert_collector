@@ -9,12 +9,7 @@ class EventsController < ApplicationController
     post '/events' do
         authenticate
             u = current_user
-             @event = u.events.build(artist: params[:artist], date: params[:date], venue: params[:venue], location: params[:location])       
-             @slug = "#{@event.artist}".gsub(' ','+')
-                        url = "https://www.last.fm/music/#{@slug}"
-                         Scraper.scrape_image(url)
-                        @url = Scraper.image_url
-                        @event.url = @url
+             @event = u.events.build(artist: params[:artist], date: params[:date], venue: params[:venue], location: params[:location], url: params[:url])       
                                           
              if u.save
                 redirect to '/events'
@@ -26,6 +21,8 @@ class EventsController < ApplicationController
         get '/events' do
             authenticate
             @events = Event.all 
+            # @sorted = @events.sort_by { |e| e.artist.downcase }
+            @sorted = @events.order(date: :desc)
             erb :'/events/index'
     end
 
@@ -56,7 +53,7 @@ class EventsController < ApplicationController
     patch '/events/:id' do 
         @event = Event.find_by(id: params[:id])
         authenticate_user(@event)
-            @event.update(artist: params[:artist], date: params[:date], venue: params[:venue], location: params[:location])
+            @event.update(artist: params[:artist], date: params[:date], venue: params[:venue], location: params[:location], url: params[:url])
             redirect '/events'
         end
     end
