@@ -4,6 +4,7 @@ html{
 }
 body{
     font-family: 'M PLUS Rounded 1c', sans-serif;
+    color: white;
 }
 .band_img{
     height: 40%;
@@ -19,7 +20,12 @@ body{
     width: 100%;
 }
 h3{
-    color: #531961;
+    color: #7b338d;
+    font-family: 'Varela Round', sans-serif;
+
+}
+h2{
+    color: #9452a5;
     font-weight: bolder;
 
 }
@@ -39,6 +45,7 @@ h3{
     background-color: #0f0e0f;
 }
 .my_events{
+    color: white;
     padding: 5px;
     float: center;
     margin-right: 150px;
@@ -91,7 +98,7 @@ header::after{
 .logo{
     color: #701b6c;
     font-family: 'Nova Round', cursive;
-    font-size: 15px;
+    font-size: 18px;
     float: left;
     padding: 5px 7;
     margin-top: 20px;
@@ -155,6 +162,7 @@ nav a:hover::before{
     margin-top: 5px;
 }
 .signup {
+    color: white;
     background-color: #000000;
     border: 2px solid gray;
     border-radius: 5px;
@@ -165,6 +173,7 @@ nav a:hover::before{
     margin-top: 5px;
 }
 .new_event {
+    color: white;
     background-color: #000000;
     border: 2px solid gray;
     border-radius: 5px;
@@ -176,7 +185,7 @@ nav a:hover::before{
 }
 .edit_event {
     background-color: #000000;
-    border: 2px solid gray;
+    border: 2px solid rgb(41, 20, 33);
     border-radius: 5px;
     padding: 5px;
     float: center;
@@ -184,3 +193,45 @@ nav a:hover::before{
     margin-left: 150px;
     margin-top: 5px;
 }
+.button_{
+    background-color: black;
+    border: none;
+    color: #63707e;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    cursor: pointer;
+}
+
+ .button_:hover {
+    color: #966788;}
+
+hr{
+    width: 50%;
+    border-color: #727172;
+}
+#username, #password {
+    background-color: #63707e;
+    border: 0;
+    border-radius: 5px;
+    font-family: inherit;
+}
+
+input:focus {
+  outline: none;
+  background-color: #a793a1;
+  border: 0;
+
+}
+.edit-delete{
+    position: relative;
+}
+
+.button_, delete{
+    position: absolute;
+    top: 53%;
+    left: 6%;
+
+}
+

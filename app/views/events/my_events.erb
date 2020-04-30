@@ -10,8 +10,8 @@
                 <br><h3>Location:</h3> <%= e.location %></p>
                  <a href="/events/<%= e.id %>/edit">Edit</a>
                  <form action="/events/<%= e.id %>" method="post">
-                  <input type="hidden" name="_method" value="delete">
-                  <input type="submit" value="delete">
+                  <input type="hidden" class="button_" name="_method" value="delete">
+                  <input type="submit" class="button_" value="delete">
                    </form></div>
         <% end %>
         

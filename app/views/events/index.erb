@@ -1,27 +1,35 @@
 
-<div class="welcome2"><h3>Welcome, <%= current_user.first_name %>!</h3></div>
+
+<div class="welcome2">
+<h2>Welcome, <%= current_user.first_name %>!</h2>
+</div>
 
     <% @sorted.each do |event| %>    
     <div class="event">
     <div class="event_first_name">
     <%= event.user.first_name %> 
     </div>
-
     <div class="event_info">
     <br><img class="band_img" src="<%= event.url %>">
-    <br><h3>Artist:</h3> <%= event.artist %>
-    <br><h3>Date:</h3> <%= event.date %>
-    <br><h3>Venue:</h3> <%= event.venue %>
-    <br><h3>City/State:</h3> <%= event.location %>
+
+    <div class="artist-info">
+   <h3>Artist:</h3> <%= event.artist %>
+   </div>
+    <h3>Date:</h3><%= event.date %>
+    <h3>Venue:</h3> <%= event.venue %>
+    <h3>City/State:</h3> <%= event.location %>
+    <br>
     <% if event.user == current_user %>
-        <a href="/events/<%= event.id %>/edit">Edit</a>
-        <form action="/events/<%= event.id %>" method="post">
-        <input type="hidden" name="_method" value="delete">
-        <input type="submit" value="delete">
+    <div class="edit-delete">
+       <br> <a href="/events/<%= event.id %>/edit">Edit</a>
+        <form id="edit" action="/events/<%= event.id %>" method="post">
+        <input type="hidden" class="button_" name="_method" value="delete">
+        <input type="submit" id="delete"  class="button_" value="delete">
         </form>
         <% end %>
         </div>
-        <hr>
         </div>
+        </div>
+        <hr>
         <% end %>
 
