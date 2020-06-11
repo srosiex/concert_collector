@@ -8,10 +8,11 @@
                 <br><h3>Artist:</h3> <%= e.artist %>
                 <br><h3>Venue:</h3> <%= e.venue %>
                 <br><h3>Location:</h3> <%= e.location %></p>
+                <div class="edit-delete">
                  <a href="/events/<%= e.id %>/edit">Edit</a>
                  <form action="/events/<%= e.id %>" method="post">
                   <input type="hidden" class="button_" name="_method" value="delete">
-                  <input type="submit" class="button_" value="delete">
-                   </form></div>
+                  <input type="submit" id="delete" class="button_" value="delete">
+                   </form></div></div>
         <% end %>
         

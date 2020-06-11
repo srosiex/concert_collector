@@ -15,20 +15,22 @@
 <header>
 <img class="top_img" src='https://i.imgur.com/dInZLcH.jpg'>
 
-    <div class="container">        
-    <h1 class="logo">Concert Collector</h1>
+    <div class="container">  
+    <div class="nav-container">      
     <nav>
         <ul>
         <% if logged_in? %>
-                 
-                 <a href="/events">Home</a></li>
+        <li><span class="logo">Concert Collector</span></li>
+
+                 <li><a href="/events">Home</a></li>
                  <li><a href="/events/my_events">My Concerts</a></li>
                  <li><a href="/events/new">Add New Concert</a></li>
                  <li><form action="/logout" method="post" class="logout">
-                 <input type="hidden" class="button_" name="_method" value="delete">
-                 <input type="submit" class="button_" value="Logout">
+                <li> <input type="hidden" class="logout-button" name="_method" value="delete">
+                 <input type="submit" class="logout-button" value="Logout"></li>
                  </form><% end %> </ul> 
     </nav>
+    </div>
     </div>
     </header>
 

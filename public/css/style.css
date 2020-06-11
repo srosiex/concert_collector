@@ -99,12 +99,9 @@ header::after{
     color: #701b6c;
     font-family: 'Nova Round', cursive;
     font-size: 18px;
-    float: left;
-    padding: 5px 7;
-    margin-top: 20px;
 }
 
-nav{
+/* nav{
     float: right;
 }
 nav ul{
@@ -118,12 +115,24 @@ nav li{
     padding-top: 23px;
 
     position: relative;
+} */
+.nav-container {
+    display: grid;
+    grid-gap: 20px;
+}
+nav ul {
+    display: grid;
+    grid-gap: 20px;
+    padding: 0;
+    list-style: none;
+    grid-template-columns: repeat(5, 1fr);
 }
 nav a {
     color: #63707e;
     text-decoration: none;
     text-transform: uppercase;
     font-size: 14px;
+    align-items: start;
 }
 a{
     color: #63707e;
@@ -141,15 +150,13 @@ nav a::before {
     width: 0%;
     background-color: 63707e;
 
-    position: absolute;
-    top: 0;
-
     transition: all ease-in-out 250ms;
 }
 
 nav a:hover::before{
     width: 100%;
 }
+
 .login {
     color: white;
     background-color: #000000;
@@ -202,10 +209,26 @@ nav a:hover::before{
     font-size: 14px;
     font-family: 'M PLUS Rounded 1c', sans-serif;
     cursor: pointer;
+
 }
 
  .button_:hover {
     color: #966788;}
+
+    .logout-button{
+        background-color: black;
+        border: none;
+        color: #63707e;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 14px;
+        font-family: 'M PLUS Rounded 1c', sans-serif;
+        cursor: pointer;
+    
+    }
+    
+     .logout-button:hover {
+        color: #966788;}
 
 hr{
     width: 50%;
@@ -225,13 +248,9 @@ input:focus {
 
 }
 .edit-delete{
-    position: relative;
+   display: grid;
+   grid-template-columns: 1fr 1fr;
 }
 
-.button_, delete{
-    position: absolute;
-    top: 53%;
-    left: 6%;
 
-}
 
