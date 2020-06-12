@@ -10,4 +10,5 @@ configure :development do
 end
 
 
+# ActiveRecord::Base.establish_connection(ENV['DATABASE_URL'] || 'postgres://localhost/mydb')
 require_all 'app'

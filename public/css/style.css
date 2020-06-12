@@ -209,6 +209,7 @@ nav a:hover::before{
     font-size: 14px;
     font-family: 'M PLUS Rounded 1c', sans-serif;
     cursor: pointer;
+    padding: 0;
 
 }
 
@@ -247,9 +248,9 @@ input:focus {
   border: 0;
 
 }
-.edit-delete{
-   display: grid;
-   grid-template-columns: 1fr 1fr;
+.edit-delete li{
+   display: inline-block;
+
 }
 
 
