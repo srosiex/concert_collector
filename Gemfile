@@ -14,7 +14,7 @@ gem "require_all", "~> 3.0"
 
 gem "bcrypt", "~> 3.1"
 
-gem "nokogiri", "~> 1.10"
+gem "nokogiri", "~> 1.13"
 
 group :development do 
     gem "sqlite3", "~> 1.4"
