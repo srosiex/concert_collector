@@ -3,7 +3,7 @@ gem "sinatra", "~> 2.0"
 
 gem "pry", "~> 0.12.2"
 
-gem "activerecord", "~> 6.0"
+gem "activerecord", "~> 6.1"
 
 gem "sinatra-activerecord", "~> 2.0"
 
